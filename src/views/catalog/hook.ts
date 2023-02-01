@@ -1,16 +1,29 @@
 import { ref } from "vue";
 import { useRouter } from "vue-router";
 
-export function useTab() {
-  const tabIdx = ref(0);
+export function useDynasty() {
+  const dynastyIdx = ref(0);
 
-  function tabChange(idx: number) {
-    tabIdx.value = idx;
+  function dynastyChange(idx: number) {
+    dynastyIdx.value = idx;
   }
 
   return {
-    tabIdx,
-    tabChange,
+    dynastyIdx,
+    dynastyChange,
+  };
+}
+
+export function useStyles() {
+  const styleIdx = ref(0);
+
+  function styleChange(idx: number) {
+    styleIdx.value = idx;
+  }
+
+  return {
+    styleIdx,
+    styleChange,
   };
 }
 

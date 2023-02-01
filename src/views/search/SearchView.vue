@@ -1,25 +1,31 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { IconSearch } from '@arco-design/web-vue/es/icon';
+</script>
 
 <template>
   <div id="search" class="flex">
-    <div class="search-logo mb-20 flex font-16">
-      <span>台北</span>
-      <img src="@/assets/logo.jpg" alt="" />
-      <span>博物馆</span>
-    </div>
     <div class="search-frame flex">
-      <input type="text" class="search-input font-16" />
-      <div class="search-btn pointer">搜索陶瓷</div>
+      <input autofocus type="text" placeholder="搜索内容" class="search-input font-16" />
+      <div class="search-btn pointer">
+        <icon-search :style="{ padding: '10px' }"/>
+      </div>       
+    </div>
+    <!-- 背景图 -->
+    <div class="bg"></div>
+    <div class="bg-img flex">
+      <img src="@/assets/img/图层 1.jpg" alt="">
+      <img src="@/assets/img/图层 2.jpg" alt="">
     </div>
   </div>
 </template>
 
 <style lang="scss" scoped>
-$--search-blur: gray;
+$--search-blur: #f8f8f8;
 
 #search {
   justify-content: center;
   align-items: center;
+  position: relative;
   flex-direction: column;
   min-height: calc(100vh - 40px);
 
@@ -34,38 +40,40 @@ $--search-blur: gray;
       text-indent: 0.5em;
       height: 100%;
       min-width: 400px;
-
-      &:focus {
-        border: 1.5px solid var(--museum-primary);
-        border-right: none;
+      background: transparent;
+      color: $--search-blur;
+      &::placeholder {
+        text-align: center;
       }
     }
-
     .search-btn {
-      font-weight: bold;
-      height: 100%;
-      padding: 0 20px;
-      line-height: 45px;
-      background: var(--museum-primary);
-      color: white;
+      width: 50px;
+      text-align: center;
+      height: 45px;
       border-top-right-radius: 8px;
       border-bottom-right-radius: 8px;
-      white-space: nowrap;
+      border: 1.5px solid $--search-blur;
+      border-left: none;
+      color: $--search-blur;
+      line-height: 45px;
     }
   }
 
-  .search-logo {
-    justify-content: space-around;
-    align-items: center;
-
+  .bg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+  }
+  .bg {
+    opacity: .8;
+    z-index: -1;
+    background: linear-gradient(to bottom, #000 60%, #f8f8f8);
+  }
+  .bg-img {
+    position: absolute;
+    z-index: -2;
     img {
-      margin: 0 10px;
-      width: 100px;
-    }
-
-    span {
-      font-weight: bold;
-      font-size: 40px;
+      width: 50%;
     }
   }
 }

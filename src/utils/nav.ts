@@ -4,7 +4,7 @@ export const NavData = [
     path: "/",
   },
   {
-    name: "目录",
+    name: "藏品",
     path: "/catalog",
   },
   {
@@ -12,7 +12,15 @@ export const NavData = [
     path: "/search",
   },
   {
-    name: "自我介绍",
+    name: "学术",
+    path: "/academic",
+  },
+  {
+    name: "资讯",
+    path: "/information",
+  },
+  {
+    name: "概览",
     path: "/profile",
   },
 ];

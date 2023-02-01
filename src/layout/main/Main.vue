@@ -15,7 +15,6 @@ import Footer from "../footer/Footer.vue";
 <style lang="scss">
 #main {
   margin: 0 auto;
-  padding: 0 20px;
   max-width: 1000px;
   min-height: calc(100vh - 40px);
 }

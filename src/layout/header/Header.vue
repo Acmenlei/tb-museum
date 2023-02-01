@@ -4,10 +4,18 @@ import { NavData } from "@/utils/nav";
 </script>
 
 <template>
-  <div id="header" class="font-13 flex" data-aos="zoom-in">
-    <RouterLink :to="nav.path" v-for="nav in NavData">
-      {{ nav.name }}
-    </RouterLink>
+  <div id="header" class="flex font-13">
+    <div class="logo">
+      <img src="@/assets/img/logo.jpg" alt="">
+    </div>
+    <div class="nav flex" data-aos="zoom-in">
+      <RouterLink :to="nav.path" v-for="nav in NavData">
+        {{ nav.name }}
+      </RouterLink>
+    </div>
+    <div class="language pointer hover">
+      中文简体
+    </div>
   </div>
 </template>
 
@@ -18,15 +26,36 @@ import { NavData } from "@/utils/nav";
   height: 40px;
   line-height: 40px;
   max-width: 1000px;
+  background: #e6dbdb;
   justify-content: space-between;
 
-  a {
-    color: var(--vt-c-white-mute);
-    text-decoration: none;
+  .logo {
+    flex: 1;
 
-    &:hover {
-      color: rgb(255, 255, 255);
+    img {
+      height: 40px;
     }
+  }
+
+  .nav {
+    flex: 2;
+    justify-content: space-around;
+
+    a {
+      color: #000;
+      text-decoration: none;
+      margin: 0 20px;
+
+      &:hover {
+        opacity: .7;
+      }
+    }
+  }
+
+  .language {
+    flex: 1;
+    color: #000;
+    text-align: right;
   }
 }
 </style>

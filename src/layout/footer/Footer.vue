@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div id="footer">&copy; 版权信息待填写</div>
+  <div id="footer" class="mt-20">&copy; 版权信息待填写</div>
 </template>
 
 <style lang="scss" scoped>
@@ -9,5 +9,6 @@
   max-width: 1000px;
   margin: 20px auto;
   padding: 0 20px;
+  text-align: center;
 }
 </style>
