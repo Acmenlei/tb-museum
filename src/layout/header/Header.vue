@@ -8,7 +8,7 @@ import { NavData } from "@/utils/nav";
     <div class="logo">
       <img src="@/assets/img/logo.jpg" alt="">
     </div>
-    <div class="nav flex" data-aos="zoom-in">
+    <div class="nav flex">
       <RouterLink :to="nav.path" v-for="nav in NavData">
         {{ nav.name }}
       </RouterLink>

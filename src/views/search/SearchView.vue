@@ -1,13 +1,13 @@
 <script setup lang="ts">
-import { IconSearch } from '@arco-design/web-vue/es/icon';
+
 </script>
 
 <template>
   <div id="search" class="flex">
     <div class="search-frame flex">
       <input autofocus type="text" placeholder="搜索内容" class="search-input font-16" />
-      <div class="search-btn pointer">
-        <icon-search :style="{ padding: '10px' }"/>
+      <div class="search-btn pointer" @click="$router.push('/catalog')">
+        <icon-search :style="{ padding: '10px 10px 15px 12px',fontSize: '50px' }"/>
       </div>       
     </div>
     <!-- 背景图 -->

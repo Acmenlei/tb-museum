@@ -5,8 +5,8 @@ import App from "./App.vue";
 import router from "./router";
 
 import "./assets/main.css";
-// import ArcoVueIcon from '@arco-design/web-vue/es/icon';
+import ArcoVueIcon from '@arco-design/web-vue/es/icon';
 
 const app = createApp(App);
 
-app.use(createPinia()).use(router).mount("#app");
+app.use(createPinia()).use(router).use(ArcoVueIcon).mount("#app");

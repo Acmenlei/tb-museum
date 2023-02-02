@@ -31,7 +31,7 @@
       font-weight: bold;
     }
     flex: 1;
-    padding: 20px 0 20px 50px;
+    padding: 20px 10px 20px 40px;
     border-bottom: 1px solid #ccc;
     p {
       font-size: 13px;
